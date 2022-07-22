@@ -1,0 +1,333 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    background-color: #f5f6f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    width: 30%;
+    margin-right: 15vw;
+}
+
+main {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+#logo {
+    width: max(75px, 7vw);
+    aspect-ratio: 3/2;
+    margin-left: 15vw;
+}
+
+#intro {
+    height: calc(100vh - 75px);
+    display: flex;
+    background: linear-gradient(45deg,
+            #EBECEC 0%,
+            #C3C7C7 20%,
+            #9CA2A2 40%,
+            #747C7D 60%,
+            #4C5758 80%,
+            #384445 100%);
+    padding-top: 75px;
+}
+
+#of {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#quote-pt1 {
+    text-align: left;
+    margin-left: 13%;
+}
+
+#quote-pt2 {
+    text-align: right;
+    margin-right: 13%;
+}
+
+.quote>p>span {
+    display: block;
+    font-family: Pacifico;
+    font-size: 1.4rem;
+}
+
+.quote>p>span:first-child::before {
+    content: '\201C';
+    font-size: 2rem;
+}
+
+.quote>p>span:last-child::after {
+    content: '\201D';
+    font-size: 2rem;
+}
+
+.card {
+    width: 70%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.card-img {
+    /* float: right;
+    margin: 20px 5% 20px 2.5%; */
+    width: 50%;
+    align-self: center;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+    /* float: left;
+    margin: 20px 2.5% 20px 5%; */
+    width: 45%;
+}
+
+.card-body p {
+    margin: 0 0 0.5rem;
+    font-family: Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.card-body h1 {
+    margin: 0 0 1rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.card-body h1:last-of-type {
+    margin-top: 1rem;
+}
+
+nav>ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav li>a {
+    text-decoration: none;
+    color: black;
+} */
+
+#book {
+    padding: 75px 0;
+    background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+}
+
+#book>h1 {
+    margin: 0 0 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.book-wrapper {
+    width: 80%;
+    padding: 2.5rem;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book-wrapper * {
+    box-sizing: border-box;
+}
+
+.book-wrapper img {
+    width: 40%;
+    aspect-ratio: 4/5;
+    transition: transform 0.5s;
+}
+
+.book-wrapper img:first-of-type {
+    aspect-ratio: unset;
+    margin-bottom: 2.5rem;
+    border: 7px solid #e8dcb5;
+    border-radius: 50%;
+}
+
+.book-wrapper img:last-of-type:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.book-wrapper>div {
+    width: 50%;
+    margin: 0;
+    font-size: 1.3rem;
+    font-family: Roboto;
+    text-align: left;
+    line-height: 1.8rem;
+}
+
+.book-wrapper>p {
+    width: 50%;
+    margin: 0;
+    text-align: center;
+}
+
+.book-wrapper>div>p {
+    padding: 0.5rem 0 0.5rem 2rem;
+    border-left: 5px double;
+    margin: 0;
+}
+
+.book-wrapper>p a {
+    display: inline-block;
+    width: 40%;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 1.25rem;
+    background-color: rgba(150, 47, 191, 0.8);
+    color: black;
+    font-size: 1.3rem;
+    font-family: Montserrat;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+
+.book-wrapper>p a:hover {
+    background-color: #962fbf;
+    color: white;
+}
+
+#title-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#self-brand {
+    color: black;
+}
+
+#my-journey {
+    padding: 75px 0;
+}
+
+#my-journey>h1 {
+    position: relative;
+    margin: 1rem 0 2.5rem;
+    text-align: center;
+    font-family: Lobster;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+#my-journey>h1::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 80px;
+    height: 2px;
+    top: 52%;
+    right: 56%;
+}
+
+#my-journey>h1::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 80px;
+    height: 2px;
+    top: 52%;
+    left: 56%;
+}
+
+.journey-wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.journey-wrapper p {
+    margin: 0 0 0.5rem;
+}
+
+.journey-wrapper>* {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.journey-wrapper>div:last-of-type {
+    margin-bottom: unset;
+}
+
+.institute-logo {
+    width: 15%;
+    height: 15%;
+    border-radius: 1.5rem;
+}
+
+.brdr {
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+.details {
+    display: inline-block;
+    width: 75%;
+}
+
+.details h3 {
+    margin: 0 0 0.5rem;
+    font-family: Roboto;
+    font-size: 1.2rem;
+    color: #37c;
+}
+
+.details h6 {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: Montserrat;
+    color: #5e9516;
+}
+
+.details h6:first-of-type {
+    margin-top: unset;
+}
+
+.details a:hover {
+    color: #3d8ff5;
+}
